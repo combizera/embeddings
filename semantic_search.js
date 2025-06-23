@@ -1,7 +1,7 @@
 import { cos_sim, pipeline } from "@huggingface/transformers";
 import fs from "fs";
 
-const embedder = await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2", { dtype: "q8"})
+const embedder = await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2", { dtype: "q8" })
 
 async function getEmbedding(texts) {
   return embedder(texts, { pooling: "mean", normalize: true}).then(tensor => tensor.tolist())
@@ -21,7 +21,7 @@ for(let i = 0; i < movies.length; i++) {
   movies[i]['embedding'] = embeddings[i]
 }
 
-const query = "A movie about space and aliens"
+const query = "A movie about toys"
 const queryEmbedding = (await getEmbedding(query))[0]
 
 for (let movie of movies) {
