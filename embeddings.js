@@ -12,4 +12,4 @@ async function embedWithGoogle(text) {
 }
 
 console.log(cos_sim(await embedWithGoogle("Olá, tudo bem?"), await embedWithGoogle("Olá, tudo sim")));
-console.log(cos_sim(await embedWithGoogle("Olá, tudo bem?"), await embedWithGoogle("Eu gosto de Pizza")));
+console.log(cos_sim(await embedWithGoogle("Olá, tudo bem?"), await embedWithGoogle("Olá, me chamo Ygor")));
