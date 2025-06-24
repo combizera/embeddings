@@ -28,7 +28,9 @@
     "test": ""
   },
   "dependencies": {
+    "@xenova/transformers": "^2.17.2",
     "chromadb": "^3.0.4",
-    "chromadb-default-embed": "^2.14.0"
+    "chromadb-default-embed": "^2.14.0",
+    "csv-parser": "^3.2.0"
   }
 }
