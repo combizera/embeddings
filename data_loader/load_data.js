@@ -2,7 +2,7 @@ import fs from "fs";
 import csv from "csv-parser";
 import { ChromaClient } from "chromadb";
 
-const client = new ChromaClient();
+const client = new ChromaClient({ path: "http://localhost:8010" });
 
 const collection = await client.getOrCreateCollection({
   name: "movies",
